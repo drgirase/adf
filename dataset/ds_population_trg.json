@@ -5,13 +5,27 @@
 			"referenceName": "ls_ADLS2_target",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"T_Folder": {
+				"type": "string"
+			},
+			"T_Subfolder": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "population.csv",
-				"fileSystem": "destination"
+				"folderPath": {
+					"value": "@dataset().T_Subfolder",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().T_Folder",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

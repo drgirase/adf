@@ -20,6 +20,7 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": false,
+							"wildcardFileName": "*.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -50,7 +51,11 @@
 				"inputs": [
 					{
 						"referenceName": "ds_population_src",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Folder": "source",
+							"SubFolder": "Input"
+						}
 					}
 				],
 				"outputs": [
