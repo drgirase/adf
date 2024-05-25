@@ -35,7 +35,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"fileExtension": ".csv"
 						}
 					},
 					"enableStaging": false,
@@ -61,7 +61,11 @@
 				"outputs": [
 					{
 						"referenceName": "ds_population_trg",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"T_Folder": "destination ",
+							"T_Subfolder": "Output"
+						}
 					}
 				]
 			}
