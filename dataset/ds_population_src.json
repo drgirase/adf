@@ -5,12 +5,27 @@
 			"referenceName": "ls_AzureBlobSource",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Folder": {
+				"type": "string"
+			},
+			"SubFolder": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "source"
+				"folderPath": {
+					"value": "@dataset().SubFolder",
+					"type": "Expression"
+				},
+				"container": {
+					"value": "@dataset().Folder",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": "\t",
 			"rowDelimiter": "\n",
