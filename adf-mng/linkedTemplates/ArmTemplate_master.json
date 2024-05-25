@@ -7,6 +7,18 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adf-mng"
 		},
+		"ls_ADLS2_target_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_ADLS2_target'"
+		},
+		"ls_AzureBlobSource_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_AzureBlobSource'"
+		},
+		"ls_ADLS2_target_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://mngstorage.dfs.core.windows.net/"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -33,6 +45,15 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_ADLS2_target_accountKey": {
+						"value": "[parameters('ls_ADLS2_target_accountKey')]"
+					},
+					"ls_AzureBlobSource_connectionString": {
+						"value": "[parameters('ls_AzureBlobSource_connectionString')]"
+					},
+					"ls_ADLS2_target_properties_typeProperties_url": {
+						"value": "[parameters('ls_ADLS2_target_properties_typeProperties_url')]"
 					}
 				}
 			},
