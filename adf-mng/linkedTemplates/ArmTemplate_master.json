@@ -19,6 +19,10 @@
 			"type": "string",
 			"defaultValue": "https://mngstorage.dfs.core.windows.net/"
 		},
+		"event_trigger_1_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/661d0b9c-b741-4d52-867e-1c57f3557c3e/resourceGroups/mngirase/providers/Microsoft.Storage/storageAccounts/mngstorage"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -54,6 +58,9 @@
 					},
 					"ls_ADLS2_target_properties_typeProperties_url": {
 						"value": "[parameters('ls_ADLS2_target_properties_typeProperties_url')]"
+					},
+					"event_trigger_1_properties_typeProperties_scope": {
+						"value": "[parameters('event_trigger_1_properties_typeProperties_scope')]"
 					}
 				}
 			},
