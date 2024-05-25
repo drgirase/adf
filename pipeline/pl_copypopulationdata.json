@@ -13,13 +13,22 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "@{'source'}/@{'Input'}/hospital_admissions.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "@{'destination'}/@{'Output'}/"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"recursive": false,
+							"recursive": true,
 							"wildcardFileName": "*.csv",
 							"enablePartitionDiscovery": false
 						},
@@ -63,7 +72,7 @@
 						"referenceName": "ds_population_trg",
 						"type": "DatasetReference",
 						"parameters": {
-							"T_Folder": "destination ",
+							"T_Folder": "destination",
 							"T_Subfolder": "Output"
 						}
 					}

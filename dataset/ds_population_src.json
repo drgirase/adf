@@ -18,7 +18,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "hospital_admissions.csv",
 				"folderPath": {
 					"value": "@dataset().SubFolder",
 					"type": "Expression"
