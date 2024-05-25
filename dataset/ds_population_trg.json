@@ -13,7 +13,7 @@
 				"fileName": "population.csv",
 				"fileSystem": "destination"
 			},
-			"columnDelimiter": "\t",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
