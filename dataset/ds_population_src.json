@@ -29,8 +29,6 @@
 			},
 			"columnDelimiter": "\t",
 			"rowDelimiter": "\n",
-			"compressionCodec": "gzip",
-			"compressionLevel": "Optimal",
 			"escapeChar": "\\",
 			"firstRowAsHeader": false,
 			"quoteChar": "\""
