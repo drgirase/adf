@@ -11,7 +11,16 @@
 		"ls_AzureBlobSource_connectionString": {
 			"value": ""
 		},
+		"ls_source_csv_connectionString": {
+			"value": ""
+		},
+		"ls_target_csv_accountKey": {
+			"value": ""
+		},
 		"ls_ADLS2_target_properties_typeProperties_url": {
+			"value": "https://mngstorage.dfs.core.windows.net/"
+		},
+		"ls_target_csv_properties_typeProperties_url": {
 			"value": "https://mngstorage.dfs.core.windows.net/"
 		},
 		"event_trigger_1_properties_typeProperties_scope": {

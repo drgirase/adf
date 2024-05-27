@@ -15,7 +15,19 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_AzureBlobSource'"
 		},
+		"ls_source_csv_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_source_csv'"
+		},
+		"ls_target_csv_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_target_csv'"
+		},
 		"ls_ADLS2_target_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://mngstorage.dfs.core.windows.net/"
+		},
+		"ls_target_csv_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://mngstorage.dfs.core.windows.net/"
 		},
@@ -56,8 +68,17 @@
 					"ls_AzureBlobSource_connectionString": {
 						"value": "[parameters('ls_AzureBlobSource_connectionString')]"
 					},
+					"ls_source_csv_connectionString": {
+						"value": "[parameters('ls_source_csv_connectionString')]"
+					},
+					"ls_target_csv_accountKey": {
+						"value": "[parameters('ls_target_csv_accountKey')]"
+					},
 					"ls_ADLS2_target_properties_typeProperties_url": {
 						"value": "[parameters('ls_ADLS2_target_properties_typeProperties_url')]"
+					},
+					"ls_target_csv_properties_typeProperties_url": {
+						"value": "[parameters('ls_target_csv_properties_typeProperties_url')]"
 					},
 					"event_trigger_1_properties_typeProperties_scope": {
 						"value": "[parameters('event_trigger_1_properties_typeProperties_scope')]"
